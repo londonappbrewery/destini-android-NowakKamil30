@@ -103,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
+            mAnswearTopButton.setVisibility(View.GONE);
+            mAnswearBottomButtonm.setVisibility(View.GONE);
             AlertDialog.Builder alert= new AlertDialog.Builder(this);
             alert.setTitle("End your Story");
             alert.setMessage("do you want to play one time more?");
@@ -111,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
 
+
+                    mAnswearTopButton.setVisibility(View.VISIBLE);
+                    mAnswearBottomButtonm.setVisibility(View.VISIBLE);
                         mMyStoryList= new ArrayList<Integer>();
 
                     int startStory=0;
